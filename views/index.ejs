@@ -4,20 +4,18 @@
 	<title>Nav Tree In JQuery</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+		ul li{
+			list-style:  none;
+		}
+	</style>
 </head>
 <body>
-	<ul class="all-season" id="all-season"></ul>
+	<ul class="all-season" id="all-season">IPL Chart</ul>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="jquery-3.3.1.min.js"></script> -->
+<script type="text/javascript" src="domOperations.js"></script>
 <script type="text/javascript">
-	const seasons = <%- data%>;
-	for(i in seasons){
-		let seasonNo = $('<li></li>').text(seasons[i]._id).attr({
-			'id':'season'+seasons[i]._id,
-			'class': 'season-list',
-			'value': seasons[i]._id
-		});
-		$('#all-season').append(seasonNo);
-	}
 </script>
 </html>
